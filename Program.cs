@@ -32,6 +32,39 @@ namespace Pisagor
             Console.WriteLine(result[1]);
             Console.WriteLine(result[2]);
             Console.ReadKey();
+            
+            //int n = 644;
+            //bool isDone = false;
+            //for (int x = 1; x < n; x++)
+            //{
+            //    for (int y = 1; y < n; y++)
+            //    {
+            //        //if (y <= x)
+            //        //    continue;
+            //        for (int z = n - (x + y); z < n && z > 0; z--)
+            //        {
+            //            //if (z <= y && z <= x)
+            //            //    continue;
+
+            //            if ((Math.Pow(z, 2) == Math.Pow(x, 2) + Math.Pow(y, 2)) && (x < y))
+            //            {
+            //                if (x + y + z == n)
+            //                {
+            //                    Console.WriteLine(" sonuc x:" + x);
+            //                    Console.WriteLine(" sonuc y:" + y);
+            //                    Console.WriteLine(" sonuc z:" + z);
+            //                    isDone = true;
+            //                   // break;
+            //                }
+            //                //listBox1.Items.Add(x.ToString() + "-" + y.ToString() + "-" + z.ToString());
+            //                Console.WriteLine(x + " - " + y + " - " + z);
+            //            }
+            //        }
+            //        //if (isDone) break;
+            //    }
+            //    //if (isDone) break;
+            //}
+            //Console.ReadKey();
         }
     }
 }
