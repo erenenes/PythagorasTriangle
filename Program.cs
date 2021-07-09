@@ -7,31 +7,53 @@ namespace Pisagor
     {
         static void Main(string[] args)
         {
-            // 3-4-5 // 5-12-13 // 8-15-17 // 7-24-25
-            int n = 1000;
-            int[] trianglesTotal = new int[] { 12, 30, 40, 56 };
-            int[,] triangles = new int[,] { { 3, 4, 5 }, { 5, 12, 13 }, { 8, 15, 17 }, { 7, 24, 25 } };
-            int multiple = 1;
-            int index = 0;
-            int[] result = new int[3];
-
-            for (int i = 0; i < trianglesTotal.Length; i++)
+            
+            int N = 1000;
+            int c = 0;
+            bool found = false;
+            for (int a = 1; a < N/3; a++)
             {
-                if (n % trianglesTotal[i] == 0)
+                for (int b = 1; b < N/2; b++)
                 {
-                    multiple = n / trianglesTotal[i];
-                    index = i;
-                    break;
+                    c = N - a - b;
+                    if ((a*a)+(b*b)==(c*c))
+                    {
+                        Console.WriteLine("sonuc : a:"+a+" b:" +b+" c:"+c);
+                        found = true;
+                        break;
+                    }
                 }
+                if (found) break;
             }
-            for (int i = 0; i < result.Length; i++)
-            {
-                result[i] = triangles[index, i] * multiple;
-            }
-            Console.WriteLine(result[0]);
-            Console.WriteLine(result[1]);
-            Console.WriteLine(result[2]);
             Console.ReadKey();
+            
+            
+            
+            // 3-4-5 // 5-12-13 // 8-15-17 // 7-24-25
+            //int n = 1000;
+            //int[] trianglesTotal = new int[] { 12, 30, 40, 56 };
+            //int[,] triangles = new int[,] { { 3, 4, 5 }, { 5, 12, 13 }, { 8, 15, 17 }, { 7, 24, 25 } };
+            //int multiple = 1;
+            //int index = 0;
+            //int[] result = new int[3];
+
+            //for (int i = 0; i < trianglesTotal.Length; i++)
+            //{
+            //    if (n % trianglesTotal[i] == 0)
+            //    {
+            //        multiple = n / trianglesTotal[i];
+            //        index = i;
+            //        break;
+            //    }
+            //}
+            //for (int i = 0; i < result.Length; i++)
+            //{
+            //    result[i] = triangles[index, i] * multiple;
+            //}
+            //Console.WriteLine(result[0]);
+            //Console.WriteLine(result[1]);
+            //Console.WriteLine(result[2]);
+            //Console.ReadKey();
             
             //int n = 644;
             //bool isDone = false;
